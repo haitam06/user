@@ -29,10 +29,10 @@ public class PaymentDetailsController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // @GetMapping("/order/{orderId}")
-    // public List<PaymentDetails> getPaymentsByOrderId(@PathVariable Integer orderId) {
-    //     return paymentDetailsService.getPaymentsByOrderId(orderId);
-    // }
+    @GetMapping("/order/{orderId}")
+    public List<PaymentDetails> getPaymentsByOrderId(@PathVariable Integer orderId) {
+        return paymentDetailsService.getPaymentsByOrderId(orderId);
+    }
 
     @PostMapping
     public PaymentDetails createPayment(@RequestBody PaymentDetails paymentDetails) {

@@ -27,14 +27,14 @@ public class WishlistService {
         return wishlistRepository.findById(id);
     }
 
-    // TODO:
-    // public List<Wishlist> getWishlistsByUserId(Integer userId) {
-    //     return wishlistRepository.findByUserId(userId);
-    // }
+    
+    public List<Wishlist> getWishlistsByUserId(Integer userId) {
+        return wishlistRepository.findByUserId(userId);
+    }
 
-    // public List<Wishlist> getWishlistByProductId(Integer userId) {
-    //     return wishlistRepository.findByProductId(userId);
-    // }
+    public List<Wishlist> getWishlistByProductId(Integer userId) {
+        return wishlistRepository.findByProductId(userId);
+    }
 
     public Wishlist createWishlist(Wishlist wishlist) {
         return wishlistRepository.save(wishlist);

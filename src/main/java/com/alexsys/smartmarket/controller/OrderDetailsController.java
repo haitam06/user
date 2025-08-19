@@ -29,10 +29,10 @@ public class OrderDetailsController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // @GetMapping("/user/{userId}")
-    // public List<OrderDetails> getOrdersByUserId(@PathVariable Integer userId) {
-    //     return orderDetailsService.getOrdersByUserId(userId);
-    // }
+    @GetMapping("/user/{userId}")
+    public List<OrderDetails> getOrdersByUserId(@PathVariable Integer userId) {
+        return orderDetailsService.getOrdersByUserId(userId);
+    }
 
     @PostMapping
     public OrderDetails createOrder(@RequestBody OrderDetails order) {

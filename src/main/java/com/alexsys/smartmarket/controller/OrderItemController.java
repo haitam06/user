@@ -29,10 +29,10 @@ public class OrderItemController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // @GetMapping("/order/{orderId}")
-    // public List<OrderItem> getOrderItemsByOrderId(@PathVariable Integer orderId) {
-    //     return orderItemService.getOrderItemsByOrderId(orderId);
-    // }
+    @GetMapping("/order/{orderId}")
+    public List<OrderItem> getOrderItemsByOrderId(@PathVariable Integer orderId) {
+        return orderItemService.getOrderItemsByOrderId(orderId);
+    }
 
     @PostMapping
     public OrderItem createOrderItem(@RequestBody OrderItem orderItem) {

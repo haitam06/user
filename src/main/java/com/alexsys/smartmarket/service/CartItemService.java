@@ -31,6 +31,11 @@ public class CartItemService {
         return cartItemRepository.save(cartItem);
     }
 
+    
+    public List<CartItem> getCartItemsByCartId(Integer cartId) {
+        return cartItemRepository.findByCartId(cartId);
+    }
+
     public Optional<CartItem> updateCartItem(Integer id, CartItem cartItemDetails) {
         var existingCartItemOptional = getCartItemById(id);
         if (existingCartItemOptional.isEmpty()) {

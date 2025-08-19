@@ -27,9 +27,9 @@ public class OrderItemService {
         return orderItemRepository.findById(id);
     }
 
-    // public List<OrderItem> getOrderItemsByOrderId(Integer orderId) {
-    //     return orderItemRepository.findByOrderDetailsId(orderId);
-    // }
+    public List<OrderItem> getOrderItemsByOrderId(Integer orderId) {
+        return orderItemRepository.findByOrderDetailsId(orderId);
+    }
 
     public OrderItem createOrderItem(OrderItem orderItem) {
         return orderItemRepository.save(orderItem);

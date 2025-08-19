@@ -32,6 +32,11 @@ public class OrderDetailsService {
         return orderDetailsRepository.save(orderDetails);
     }
 
+    
+    public List<OrderDetails> getOrdersByUserId(Integer userId) {
+        return orderDetailsRepository.findByUserId(userId);
+    }
+
     public Optional<OrderDetails> updateOrderDetails(Integer id, OrderDetails orderDetailsDetails) {
         var existingOrderOptional = getOrderById(id);
         if (existingOrderOptional.isEmpty()) {

@@ -29,16 +29,16 @@ public class WishlistController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // TODO:
-    // @GetMapping("/user/{userId}")
-    // public List<Wishlist> getWishlistByUser(@PathVariable Integer userId) {
-    //     return wishlistService.getWishlistsByUserId(userId);
-    // }
+    
+    @GetMapping("/user/{userId}")
+    public List<Wishlist> getWishlistByUser(@PathVariable Integer userId) {
+        return wishlistService.getWishlistsByUserId(userId);
+    }
 
-    // @GetMapping("/product/{productId}")
-    // public List<Wishlist> getWishlistByProduct(@PathVariable Integer productId) {
-    //     return wishlistService.getWishlistByProductId(productId);
-    // }
+    @GetMapping("/product/{productId}")
+    public List<Wishlist> getWishlistByProduct(@PathVariable Integer productId) {
+        return wishlistService.getWishlistByProductId(productId);
+    }
 
     @PostMapping
     public Wishlist addWishlistItem(@RequestBody Wishlist wishlist) {

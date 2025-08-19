@@ -29,10 +29,10 @@ public class CartItemController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    // @GetMapping("/cart/{cartId}")
-    // public List<CartItem> getCartItemsByCartId(@PathVariable Integer cartId) {
-    //     return cartItemService.getCartItemsByCartId(cartId);
-    // }
+    @GetMapping("/cart/{cartId}")
+    public List<CartItem> getCartItemsByCartId(@PathVariable Integer cartId) {
+        return cartItemService.getCartItemsByCartId(cartId);
+    }
 
     @PostMapping
     public CartItem createCartItem(@RequestBody CartItem cartItem) {

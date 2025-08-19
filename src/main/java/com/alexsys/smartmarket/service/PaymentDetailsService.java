@@ -27,10 +27,10 @@ public class PaymentDetailsService {
         return paymentDetailsRepository.findById(id);
     }
 
-    //TODO:
-    // public List<PaymentDetails> getPaymentsByOrderId(Integer orderId) {
-    //     return paymentDetailsRepository.findByOrderDetailsId(orderId);
-    // }
+    
+    public List<PaymentDetails> getPaymentsByOrderId(Integer orderId) {
+        return paymentDetailsRepository.findByOrderDetailsId(orderId);
+    }
 
     public PaymentDetails createPayment(PaymentDetails paymentDetails) {
         return paymentDetailsRepository.save(paymentDetails);
